@@ -35,6 +35,12 @@ public:
 	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
 
+public:
+	UPROPERTY(VisibleAnywhere, Category = "Game mode")
+	class AGalaga_USFX_L01Pawn* NaveJugador;
+	UPROPERTY(VisibleAnywhere, Category = "Game mode")
+	class ABallAdapter* Adaptador;
+
 };
 
 

@@ -20,7 +20,7 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	FVector PosicionActual = GetActorLocation();
-	float DesplazamientoX = Speed * DeltaTime;
+	float DesplazamientoX = Speed *DeltaTime;
 
 	FVector NuevaPosicion = FVector(PosicionActual.X + DesplazamientoX * -1, PosicionActual.Y, PosicionActual.Z);
 	SetActorLocation(NuevaPosicion);

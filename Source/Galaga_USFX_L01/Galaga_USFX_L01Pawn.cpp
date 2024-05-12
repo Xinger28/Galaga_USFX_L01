@@ -137,3 +137,12 @@ void AGalaga_USFX_L01Pawn::ShotTimerExpired()
 	bCanFire = true;
 }
 
+void AGalaga_USFX_L01Pawn::SetPojectilBall(AActor* _Adaptador)
+{
+	ProyectilBall = Cast<IIProjectilBall>(_Adaptador);
+}
+
+void AGalaga_USFX_L01Pawn::LanzarProyectil()
+{
+	ProyectilBall->LanzarProyectil();
+}

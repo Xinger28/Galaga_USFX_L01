@@ -54,7 +54,7 @@ void AEnemigoAeroloco::DispararProyectilAleatorio()
         int32 IndiceAleatorio = FMath::RandRange(0, NavesEnemigas.Num() - 1);
         AActor* NaveEnemigaObjetivo = NavesEnemigas[IndiceAleatorio];
 
-        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Disparando proyectil hacia nave enemiga objetivo"));
+        //GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Disparando proyectil hacia nave enemiga objetivo"));
         // Disparar proyectil hacia la nave enemiga objetivo
         DispararProyectilHaciaNave(NaveEnemigaObjetivo);
     }
@@ -68,15 +68,15 @@ void AEnemigoAeroloco::DispararProyectilHaciaNave(AActor* NaveEnemiga)
     // Calcular la dirección del proyectil
     FVector Direccion = PosicionObjetivo - GetActorLocation();
     Direccion.Normalize();
-    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("estamos aqui"));
+    //GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("estamos aqui"));
     // Spawn the projectile
     if (ClaseProyectil)
     {
         //FVector SpawnLocation = GetActorLocation();
-        FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * 100 + FVector(0.0f, 0.0f, 0.0f);
+        FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * 100 + FVector(10.0f, 0.0f, 0.0f);
         FRotator SpawnRotation = Direccion.Rotation();
         AGalaga_USFX_L01Projectile* NewProyectil = GetWorld()->SpawnActor<AGalaga_USFX_L01Projectile>(ClaseProyectil, SpawnLocation, SpawnRotation);
-        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Se disparo la bala"));
+        //GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Se disparo la bala"));
         if (NewProyectil)
         {
             // Set projectile velocity

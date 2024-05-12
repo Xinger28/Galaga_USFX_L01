@@ -2,6 +2,8 @@
 
 #include "Galaga_USFX_L01GameMode.h"
 #include "Galaga_USFX_L01Pawn.h"
+#include "BallAdapter.h"
+#include "Kismet/GameplayStatics.h"
 #include "NaveEnemiga.h"
 #include "NaveEnemigaTransporte.h"
 #include "NaveEnemigaCaza.h"
@@ -11,11 +13,19 @@ AGalaga_USFX_L01GameMode::AGalaga_USFX_L01GameMode()
 {
 	// set default pawn class to our character class
 	DefaultPawnClass = AGalaga_USFX_L01Pawn::StaticClass();
+	PrimaryActorTick.bCanEverTick = true;
 }
 
 void AGalaga_USFX_L01GameMode::BeginPlay()
 {
 	Super::BeginPlay();
+
+	NaveJugador = Cast<AGalaga_USFX_L01Pawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
+	Adaptador = GetWorld()->SpawnActor<ABallAdapter>(FVector(0.0f, 0.0f, 0.0f), FRotator(0.0f, 0.0f, 0.0f));
+	NaveJugador->SetPojectilBall(Adaptador);
+	NaveJugador->LanzarProyectil();
+
+
 
 	FVector UbicacionInicialNave = FVector(1600.0f, -200.0f, 200.0f);
 	FRotator RotacionInicialNave = FRotator(0.0f, 0.0f, 0.0f);
