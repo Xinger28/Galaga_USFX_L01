@@ -6,6 +6,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "NaveEnemiga.h"
 #include "NaveEnemigaTransporte.h"
+#include "NaveEnemigaFantasma.h"
 #include "NaveEnemigaCaza.h"
 #include "EnemigoAeroloco.h"
 
@@ -51,6 +52,14 @@ void AGalaga_USFX_L01GameMode::BeginPlay()
 		}
 		FVector PoscionActual = FVector(0.0f, -200.0f, 300.0f);
 		AEnemigoAeroloco* EnemigoAerolocoTemporal = World->SpawnActor<AEnemigoAeroloco>(PoscionActual, RotacionInicialNave);
+
+		for (int i = 0; i < 3; i++)
+		{
+			FVector PosicionActual = FVector(0.0f, UbicacionInicialNave.Y + i * 210, UbicacionInicialNave.Z);
+			ANaveEnemigaFantasma* NaveEnemigaFantasmaTemporal = World->SpawnActor<ANaveEnemigaFantasma>(PosicionActual, RotacionInicialNave);
+
+			TANavesEnemigasFantasma.Push(NaveEnemigaFantasmaTemporal);
+		}
 
 	}
 }

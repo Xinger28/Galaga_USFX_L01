@@ -32,6 +32,8 @@ E:\examen\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemiga.h
 E:\examen\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemiga.generated.h
 E:\examen\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaTransporte.h
 E:\examen\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaTransporte.generated.h
+E:\examen\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaFantasma.h
+E:\examen\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\NaveEnemigaFantasma.generated.h
 E:\examen\Galaga_USFX_L01\Source\Galaga_USFX_L01\NaveEnemigaCaza.h
 E:\examen\Galaga_USFX_L01\Source\Galaga_USFX_L01\Galaga_USFX_L01Projectile.h
 E:\examen\Galaga_USFX_L01\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_L01\Galaga_USFX_L01Projectile.generated.h

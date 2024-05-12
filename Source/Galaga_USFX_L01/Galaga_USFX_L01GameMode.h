@@ -10,6 +10,7 @@ class ANaveEnemiga;
 class ANaveEnemigaTransporte;
 class ANaveEnemigaCaza;
 class AEnemigoAeroloco;
+class ANaveEnemigaFantasma;
 
 UCLASS(MinimalAPI)
 class AGalaga_USFX_L01GameMode : public AGameModeBase
@@ -27,6 +28,7 @@ public:
 	ANaveEnemigaTransporte* NaveEnemigaTransporte1;
 	ANaveEnemigaCaza* NaveEnemigaCaza1;
 	AEnemigoAeroloco* EnemigoAeroloco1;
+	ANaveEnemigaFantasma* NaveEnemigaFantasma1;
 public:
 	virtual void Tick(float DeltaTime) override;
 
@@ -34,6 +36,7 @@ public:
 	TArray<ANaveEnemiga*> TANavesEnemigas;
 	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
+	TArray<ANaveEnemigaFantasma*> TANavesEnemigasFantasma;
 
 public:
 	UPROPERTY(VisibleAnywhere, Category = "Game mode")
